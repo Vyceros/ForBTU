@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cartFragment">
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="ge.academics.university.projectbtu.fragments.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="ge.academics.university.projectbtu.fragments.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" >
+        <action
+            android:id="@+id/action_shopFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="ge.academics.university.projectbtu.fragments.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <argument
+            android:name="productPrice"
+            app:argType="integer"
+            android:defaultValue="120" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="ge.academics.university.projectbtu.fragments.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" />
+</navigation>

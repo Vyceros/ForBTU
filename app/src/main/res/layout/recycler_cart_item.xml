@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/rounded_card"
+    android:padding="12dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProduct"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/oil_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/oil"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivProduct"
+        app:layout_constraintTop_toTopOf="@id/ivProduct" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProductDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/this_product_is_very_important_and_most_seller"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/tvProductName"
+        app:layout_constraintStart_toStartOf="@id/tvProductName"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/price"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvProductName"
+        app:layout_constraintTop_toBottomOf="@id/tvProductDescription" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnMinus"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/checkout_backgrounds"
+        android:padding="8dp"
+        android:src="@drawable/minus_icon"
+        app:layout_constraintStart_toStartOf="@id/tvPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnMinus"
+        app:layout_constraintStart_toEndOf="@id/btnMinus"
+        app:layout_constraintTop_toTopOf="@id/btnMinus"
+        tools:text="2" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnPlus"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/checkout_backgrounds"
+        android:padding="8dp"
+        android:src="@drawable/plus_icon"
+        app:layout_constraintBottom_toBottomOf="@id/btnMinus"
+        app:layout_constraintStart_toEndOf="@id/tvQuantity"
+        app:layout_constraintTop_toTopOf="@id/btnMinus" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:src="@drawable/trash_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayish_white"
+    tools:context=".fragments.ShopFragment">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/search_background"
+        android:drawableStart="@drawable/search_icon"
+        android:drawablePadding="6dp"
+        android:padding="12dp"
+        android:text="@string/tv_search_text"
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ibCart"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/button_background"
+        android:src="@drawable/white_cart_icon"
+        app:layout_constraintBottom_toBottomOf="@id/etSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etSearch"
+        app:layout_constraintTop_toTopOf="@id/etSearch" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivOil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSearch"
+        app:srcCompat="@drawable/oil_1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOfficialStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/official_store"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/ivOil"
+        app:layout_constraintTop_toBottomOf="@id/ivOil" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFreeDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/background_2"
+        android:padding="4dp"
+        android:text="@string/free_delivery"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/tvOfficialStore"
+        app:layout_constraintTop_toBottomOf="@id/ivOil" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBigText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/dark_gray"
+        android:fontFamily="@font/poppins"
+        android:text="@string/cart_view_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/ivOil"
+        app:layout_constraintTop_toBottomOf="@id/tvFreeDelivery" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/dark_gray"
+        android:text="@string/price"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvBigText"
+        app:layout_constraintTop_toBottomOf="@id/tvBigText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDiscounted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/discounted"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/tvPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvBigText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etOffers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/button_background"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_vertical"
+        android:padding="7dp"
+        android:text="@string/offers"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItems"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:background="@drawable/rounded_card"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etOffers"
+        tools:itemCount="3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="164dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/poppins"
+        android:text="@string/add_to_cart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/btnCall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvItems" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnCall"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/image_button_bg"
+        android:padding="10dp"
+        android:src="@drawable/phone_icon"
+        app:layout_constraintBottom_toBottomOf="@id/btnAddToCart"
+        app:layout_constraintEnd_toStartOf="@id/btnHome"
+        app:layout_constraintTop_toBottomOf="@id/rvItems" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/image_button_bg"
+        android:padding="10dp"
+        android:src="@drawable/home_icon"
+        app:layout_constraintBottom_toBottomOf="@id/btnAddToCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvItems" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
