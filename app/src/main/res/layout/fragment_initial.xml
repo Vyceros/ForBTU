@@ -3,53 +3,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/black"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".InitialFragment">
-
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivCoffee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/Image"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/coffee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="256dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvMainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="@string/fall_in_love_with_coffee_in_blissful_delight"
         android:textColor="@color/white"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="28sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ivCoffee"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivCoffee" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvBottomTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="@string/welcome_to_our_cozy_coffee_corner_where_every_cup_is_a_delightful_for_you"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/tvMainTitle"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="@color/gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGetStarted"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:text="Get Started"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
         app:layout_constraintTop_toBottomOf="@id/tvBottomTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Get Started"
-        android:background="@drawable/button_background"
-        android:layout_width="match_parent"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="64dp"
-        android:textColor="@color/white"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

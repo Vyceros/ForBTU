@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#A2A2A2</color>
     <color name="bronze">#C67C4E</color>
+    <color name="pastel_white">#E3E3E3</color>
+    <color name="orange">#C67C4E</color>
 </resources>

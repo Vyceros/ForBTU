@@ -4,4 +4,19 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fall_in_love_with_coffee_in_blissful_delight">Fall in Love with \nCoffee in Blissful\n Delight!</string>
     <string name="welcome_to_our_cozy_coffee_corner_where_every_cup_is_a_delightful_for_you">Welcome to our cozy coffee corner, where every cup is a delightful for you.</string>
+    <string name="details">Details</string>
+    <string name="coffee_mocha">Coffee Mocha</string>
+    <string name="ice_hot">Ice/Hot</string>
+    <string name="_4_8">4.8</string>
+    <string name="_230">(230)</string>
+    <string name="read_more">Read More</string>
+    <string name="long_text">A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo...</string>
+    <string name="description">Description</string>
+    <string name="size">Size</string>
+    <string name="medium_button_text">M</string>
+    <string name="small_button_text">S</string>
+    <string name="large_button_text">L</string>
+    <string name="price">Price</string>
+    <string name="price_amount">$ 4.53</string>
+    <string name="buy_now">Buy Now</string>
 </resources>
